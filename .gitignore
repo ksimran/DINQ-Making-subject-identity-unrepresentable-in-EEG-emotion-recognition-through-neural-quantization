@@ -1,0 +1,37 @@
+# Caches / build artifacts
+cache/
+outputs/
+multirun/
+wandb/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data (never commit raw corpora or extracted features); /data/ is the default
+# DINQ_DATA_ROOT, anchored so the dinq/data/ package is not ignored
+/data/
+*.dat
+*.cnt
+*.npz
+
+# Checkpoints / models
+checkpoints/
+*.pt
+*.ckpt
+
+# Env
+.venv/
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+*.swp
+chunk_experiment_v5_*.tar.gz
+
+# Run logs (contain local paths) and local working copies
+logs/
+results/**/logs/
+paper/_backup*/

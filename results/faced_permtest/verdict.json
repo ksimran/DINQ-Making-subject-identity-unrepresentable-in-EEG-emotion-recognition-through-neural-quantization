@@ -1,0 +1,39 @@
+{
+  "metric": "max",
+  "n_splits": 8,
+  "n_perm_pooled": 1000,
+  "chance_1_over_K": 0.03225806451612903,
+  "observed_mean": 0.0509272206779028,
+  "observed_ci95": [
+    0.04152859657366802,
+    0.06032584478213758
+  ],
+  "observed_per_split": [
+    0.0615,
+    0.0406,
+    0.0636,
+    0.0463,
+    0.0393,
+    0.0576,
+    0.0615,
+    0.0371
+  ],
+  "null_mean": 0.034643299999999995,
+  "null_95pct": 0.040604999999999995,
+  "null_975pct": 0.04224075,
+  "perm_p_value": 0.000999000999000999,
+  "per_split_above_own_95pct": "5/8",
+  "binomial_p": 1.54048828125e-05,
+  "mann_whitney_U": 7593.0,
+  "mann_whitney_p": 5.92751808081994e-06,
+  "bootstrap_diff_mean": 0.016283920677902804,
+  "bootstrap_diff_ci95": [
+    0.008911538645708612,
+    0.02337255703084503
+  ],
+  "ci_separated_from_null": false,
+  "distinguishable_from_null": true,
+  "residual_above_chance": 0.018669156161773767,
+  "residual_above_null95_ceiling": 0.010322220677902803,
+  "label": "NEAR-C1 (DG) with a small characterized residual"
+}

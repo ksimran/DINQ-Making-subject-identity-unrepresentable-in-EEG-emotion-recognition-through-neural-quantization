@@ -1,0 +1,20 @@
+{
+  "emotion_unseen": 0.5,
+  "recov_train": {
+    "linear": 0.08333333333333333,
+    "mlp": 0.08301279752947555,
+    "hgb": 0.08333333333333333,
+    "K": 12
+  },
+  "recov_heldout": {
+    "linear": 0.25,
+    "mlp": 0.24934957351096568,
+    "hgb": 0.24762599693746412,
+    "K": 4
+  },
+  "ceiling_train": 0.08333333333333333,
+  "ceiling_heldout": 0.25,
+  "n_test_subjects": 4,
+  "config": "fsq512",
+  "split": 2
+}

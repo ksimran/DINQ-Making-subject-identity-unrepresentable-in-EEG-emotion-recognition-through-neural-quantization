@@ -1,0 +1,62 @@
+[
+  {
+    "config": "fsq512",
+    "emotion_mean": 0.5161290322580645,
+    "emotion_std": 0.01780596948856419,
+    "recov_train_hgb": 0.013371479704014312,
+    "recov_heldout_hgb": 0.0377847463744313,
+    "ceiling": 0.011973590630943425,
+    "clean_c1": false,
+    "n_splits": 8
+  },
+  {
+    "config": "vq1024",
+    "emotion_mean": 0.6115591397849462,
+    "emotion_std": 0.025484523153035666,
+    "recov_train_hgb": 0.012625017000619368,
+    "recov_heldout_hgb": 0.04674104706275253,
+    "ceiling": 0.013153680177921298,
+    "clean_c1": false,
+    "n_splits": 8
+  },
+  {
+    "config": "vq128",
+    "emotion_mean": 0.6196236559139785,
+    "emotion_std": 0.016101006116546947,
+    "recov_train_hgb": 0.014258500953223379,
+    "recov_heldout_hgb": 0.04742695149707257,
+    "ceiling": 0.013046098112241403,
+    "clean_c1": false,
+    "n_splits": 8
+  },
+  {
+    "config": "vq256",
+    "emotion_mean": 0.6157594086021505,
+    "emotion_std": 0.021075139165650666,
+    "recov_train_hgb": 0.013008502239324371,
+    "recov_heldout_hgb": 0.048581458431280214,
+    "ceiling": 0.01280783555400585,
+    "clean_c1": false,
+    "n_splits": 8
+  },
+  {
+    "config": "vq512",
+    "emotion_mean": 0.6216397849462365,
+    "emotion_std": 0.02394963666828689,
+    "recov_train_hgb": 0.014929427399943256,
+    "recov_heldout_hgb": 0.0500811822499663,
+    "ceiling": 0.012972278067685698,
+    "clean_c1": false,
+    "n_splits": 8
+  },
+  {
+    "config": "vq512_conU",
+    "emotion_mean": 0.616263440860215,
+    "emotion_std": 0.021102578586166085,
+    "recov_train_hgb": 0.01614546802339841,
+    "recov_heldout_hgb": 0.04984090543803244,
+    "ceiling": 0.013024838663023895,
+    "clean_c1": false,
+    "n_splits": 8
+  }
+]

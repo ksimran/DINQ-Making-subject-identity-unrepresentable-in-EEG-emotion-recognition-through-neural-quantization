@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Cross-dataset secondary: recentered baseline vs DINQ (subject-grouped CV, max-over-probes domain, frozen cross-corpus thresholds).}
+\label{tab:xcorp}
+\begin{tabular}{lrrrrrrr}
+\toprule
+pair & arm & emotion & dom\_lin & dom\_deep & resid & cond & cell \\
+\midrule
+deap$\rightarrow$faced & baseline & 0.53 & 0.5 & 0.96 & 0.53 & 0.58 & C2\_SuperficiallyInvariant \\
+deap$\rightarrow$faced & dinq & 0.52 & 0.58 & 0.76 & 0.56 & 0.82 & C5\_NullRepresentation \\
+deap$\rightarrow$seedv & baseline & 0.57 & 0.5 & 0.91 & 0.56 & 0.59 & C2\_SuperficiallyInvariant \\
+deap$\rightarrow$seedv & dinq & 0.56 & 0.61 & 0.76 & 0.59 & 0.83 & C2\_SuperficiallyInvariant \\
+faced$\rightarrow$deap & baseline & 0.51 & 0.5 & 0.96 & 0.53 & 0.58 & C5\_NullRepresentation \\
+faced$\rightarrow$deap & dinq & 0.51 & 0.89 & 0.93 & 0.89 & 0.95 & C5\_NullRepresentation \\
+faced$\rightarrow$seedv & baseline & 0.52 & 0.5 & 0.96 & 0.53 & 0.63 & C5\_NullRepresentation \\
+faced$\rightarrow$seedv & dinq & 0.53 & 0.84 & 0.88 & 0.83 & 0.91 & C4\_TaskDomainEntangled \\
+seedv$\rightarrow$deap & baseline & 0.55 & 0.5 & 0.91 & 0.56 & 0.59 & C2\_SuperficiallyInvariant \\
+seedv$\rightarrow$deap & dinq & 0.54 & 0.75 & 0.75 & 0.75 & 0.84 & Unclassified \\
+seedv$\rightarrow$faced & baseline & 0.49 & 0.5 & 0.96 & 0.53 & 0.63 & C5\_NullRepresentation \\
+seedv$\rightarrow$faced & dinq & 0.5 & 0.65 & 0.74 & 0.53 & 0.84 & C5\_NullRepresentation \\
+\bottomrule
+\end{tabular}
+\end{table}

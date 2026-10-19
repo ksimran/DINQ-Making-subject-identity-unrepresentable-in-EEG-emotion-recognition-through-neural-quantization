@@ -1,0 +1,21 @@
+{
+  "emotion_unseen": 0.6518817204301075,
+  "recov_train": {
+    "linear": 0.007437450008401386,
+    "mlp": 0.008536041145983825,
+    "hgb": 0.013554501840543165,
+    "K": 92
+  },
+  "recov_heldout": {
+    "linear": 0.03677035330261136,
+    "mlp": 0.03782642089093701,
+    "hgb": 0.046370967741935484,
+    "K": 31
+  },
+  "ceiling_train": 0.012830453651125347,
+  "ceiling_heldout": 0.03897849462365591,
+  "n_train_subjects": 92,
+  "n_test_subjects": 31,
+  "config": "vq512_conU",
+  "split": 5
+}

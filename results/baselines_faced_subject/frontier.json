@@ -1,0 +1,42 @@
+[
+  {
+    "config": "grl_subject",
+    "emotion_mean": 0.6058467741935485,
+    "emotion_std": 0.027772131681362697,
+    "recov_heldout_hgb": 0.14582970589259175,
+    "recov_heldout_hgb_std": 0.03772362225911646,
+    "n_splits": 8
+  },
+  {
+    "config": "mmd",
+    "emotion_mean": 0.6070228494623656,
+    "emotion_std": 0.02264034506824547,
+    "recov_heldout_hgb": 0.10517120673155192,
+    "recov_heldout_hgb_std": 0.030385258861219754,
+    "n_splits": 8
+  },
+  {
+    "config": "random",
+    "emotion_mean": 0.5991263440860215,
+    "emotion_std": 0.024488107541669437,
+    "recov_heldout_hgb": 0.09143215517463196,
+    "recov_heldout_hgb_std": 0.02658588650090558,
+    "n_splits": 8
+  },
+  {
+    "config": "recentering",
+    "emotion_mean": 0.6177755376344086,
+    "emotion_std": 0.01887636509333547,
+    "recov_heldout_hgb": 0.2727597645847665,
+    "recov_heldout_hgb_std": 0.05279025362324647,
+    "n_splits": 8
+  },
+  {
+    "config": "task_only",
+    "emotion_mean": 0.6223118279569892,
+    "emotion_std": 0.018817204301075273,
+    "recov_heldout_hgb": 0.10272560940113974,
+    "recov_heldout_hgb_std": 0.026604042950768063,
+    "n_splits": 8
+  }
+]

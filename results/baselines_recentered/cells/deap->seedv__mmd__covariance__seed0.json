@@ -1,0 +1,51 @@
+{
+  "direction": "deap->seedv",
+  "model": "mmd",
+  "seed": 0,
+  "input": "covariance",
+  "category": "C5_NullRepresentation",
+  "ci_stable": false,
+  "probe_underpowered": false,
+  "diagnostics": {
+    "domain_linear_acc": 0.5242121035197674,
+    "deep_probe_accs": {
+      "mlp": 0.564,
+      "hgb": 0.606
+    }
+  },
+  "task_target_acc_dg": 0.5026429306651246,
+  "quantities": {
+    "task_target_acc": {
+      "point": 0.5026429306651246,
+      "ci_low": 0.475407451053135,
+      "ci_high": 0.529878410277114
+    },
+    "domain_linear_acc": {
+      "point": 0.5242121035197674,
+      "ci_low": 0.470697697972023,
+      "ci_high": 0.5777265090675119
+    },
+    "domain_deep_acc": {
+      "point": 0.6064408923734401,
+      "ci_low": 0.5390036063516273,
+      "ci_high": 0.6629514542573219
+    },
+    "residual_domain_acc": {
+      "point": 0.4120630125161847,
+      "ci_low": 0.30038843331894693,
+      "ci_high": 0.5163735433750539
+    },
+    "conditional_domain_acc": {
+      "point": 0.5038338764241808,
+      "ci_low": 0.4192983152158423,
+      "ci_high": 0.5841277113989594
+    },
+    "subspace_cos2_max": {
+      "point": 0.2361186870335386
+    }
+  },
+  "n_windows": 9268,
+  "n_trials": 5,
+  "secs": 30.4,
+  "dg_acc": 0.5586110747396714
+}

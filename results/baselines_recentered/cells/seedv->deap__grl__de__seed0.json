@@ -1,0 +1,51 @@
+{
+  "direction": "seedv->deap",
+  "model": "grl",
+  "seed": 0,
+  "input": "de",
+  "category": "C5_NullRepresentation",
+  "ci_stable": false,
+  "probe_underpowered": true,
+  "diagnostics": {
+    "domain_linear_acc": 0.9666895604395604,
+    "deep_probe_accs": {
+      "mlp": 0.936,
+      "hgb": 0.877
+    }
+  },
+  "task_target_acc_dg": 0.5159397092170201,
+  "quantities": {
+    "task_target_acc": {
+      "point": 0.5159397092170201,
+      "ci_low": 0.49951054694143165,
+      "ci_high": 0.5563227619429948
+    },
+    "domain_linear_acc": {
+      "point": 0.9666895604395604,
+      "ci_low": 0.9000686813186813,
+      "ci_high": 1.0
+    },
+    "domain_deep_acc": {
+      "point": 0.936206043956044,
+      "ci_low": 0.8533960164835165,
+      "ci_high": 0.9967948717948718
+    },
+    "residual_domain_acc": {
+      "point": 0.6700597176981542,
+      "ci_low": 0.494028230184582,
+      "ci_high": 0.999728555917481
+    },
+    "conditional_domain_acc": {
+      "point": 0.9745981408772106,
+      "ci_low": 0.9237944226316319,
+      "ci_high": 1.0
+    },
+    "subspace_cos2_max": {
+      "point": 0.8426786811578542
+    }
+  },
+  "n_windows": 7368,
+  "n_trials": 8,
+  "secs": 8.8,
+  "dg_acc": 0.5018738789766827
+}

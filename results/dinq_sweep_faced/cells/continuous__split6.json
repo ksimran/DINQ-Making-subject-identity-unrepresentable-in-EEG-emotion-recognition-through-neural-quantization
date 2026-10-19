@@ -1,0 +1,21 @@
+{
+  "emotion_unseen": 0.6397849462365591,
+  "recov_train": {
+    "linear": 0.010048626434934512,
+    "mlp": 0.011929697101561472,
+    "hgb": 0.013130888490846513,
+    "K": 92
+  },
+  "recov_heldout": {
+    "linear": 0.05588903364602142,
+    "mlp": 0.07663199758270316,
+    "hgb": 0.07451676416857185,
+    "K": 31
+  },
+  "ceiling_train": 0.0135719583287093,
+  "ceiling_heldout": 0.03726750582351319,
+  "n_train_subjects": 92,
+  "n_test_subjects": 31,
+  "config": "continuous",
+  "split": 6
+}

@@ -1,0 +1,21 @@
+faced_recentered:
+  task_floor_permnull: 0.5359
+  baseline_emotion_unseen: 0.6179
+  n_floor_splits: 8
+  # Subject-recoverability null from scripts/faced_permtest.py: 1000 permutations
+  # pooled over 8 splits (125 each), max over probes (the certificate's quantity).
+  subject_null:
+    n_perm_pooled: 1000
+    metric: max_over_probes  # {linear, mlp, hgb}
+    null_mean: 0.035
+    heldout_subject_recov_ceiling: 0.041  # null 95th percentile
+    dinq_heldout_subject_recov: 0.051  # observed mean [0.042, 0.060]
+    dinq_heldout_subject_recov_hgb: 0.049  # HGB probe only
+    permutation_p: 0.001  # P(null >= observed mean)
+    mann_whitney_p: 5.9e-6
+    bootstrap_diff_mean: 0.016  # [0.009, 0.023]
+    splits_above_own_95pct: "5/8"  # binomial p = 1.5e-5
+    ci_grazes_null_tail: true  # observed CI low 0.042 ~ null 97.5th percentile 0.042
+    residual_above_ceiling: 0.010
+    residual_above_chance: 0.019
+  verdict: near_C1_DG_small_residual  # distinguishable from the null (perm p=0.001, Mann-Whitney p<1e-5)

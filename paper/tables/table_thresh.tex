@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Frozen thresholds and permutation-null ceilings per setting.}
+\label{tab:thresh}
+\begin{tabular}{lrrr}
+\toprule
+setting & threshold & value & rationale / perm-null \\
+\midrule
+cross-corpus & task\_floor & 0.52 & recalibrated (perm-null / transfer dist) \\
+cross-corpus & task\_good & 0.55 & 0.55 (was 0.60; cross-corpus ceiling) \\
+cross-corpus & dom\_low & 0.6 & chance+0.10 \\
+cross-corpus & dom\_high & 0.75 & 60th-pct reference deep \\
+cross-corpus & residual\_low & 0.6 & chance+0.10 \\
+faced (subject) & null\_95pct ceiling & 0.041 & stabilized max-over-probes perm-null (n=1000, K=31) \\
+faced (subject) & dinq\_recov (max) & 0.051 & [0.042, 0.060]; NEAR-C1 (DG) with a small characterized residual (perm p=0.001) \\
+faced (subject) & chance 1/K & 0.032 & K=31 held-out subjects \\
+faced (subject) & task\_floor\_permnull & 0.5359 & n\_perm\_pooled=1000 \\
+\bottomrule
+\end{tabular}
+\end{table}

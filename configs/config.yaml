@@ -1,0 +1,26 @@
+# Feature-extraction config for scripts/build_features.py.
+defaults:
+  - features: de  # 'de' (baseline input) or 'covariance' (time x frequency x space frontend)
+  - _self_
+
+seed: 0
+
+# Cross-corpus band set. 'four' (theta/alpha/beta/gamma) is the default because
+# DEAP preprocessed is 4-45 Hz (no delta); 'five' is SEED-V only.
+bands: four
+montage_order: deap  # canonical common-montage ordering
+neutral: drop  # SEED-V neutral handling: 'drop' | 'hold_out'
+
+# Which corpora to build, and optional subject subsets (null = all).
+corpora: [deap, seedv]
+deap_subjects: null
+seedv_subjects: null
+
+# Cache location (features are gitignored; env override wins).
+cache_dir: ${oc.env:DINQ_CACHE_ROOT,cache}
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: false

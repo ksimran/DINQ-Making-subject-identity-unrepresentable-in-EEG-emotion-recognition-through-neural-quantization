@@ -1,0 +1,18 @@
+thresholds_recentered:
+  setting: recentered_tangent
+  cross_corpus:
+    task_floor: 0.52
+    task_good: 0.55
+    dom_low: 0.6
+    dom_high: 0.75
+    residual_low: 0.6
+    angle_align: 0.5
+    pareto_steep: 1.5
+    deep_linear_gap: 0.1
+    residual_slope_guard: 0.65
+  cross_subject:
+    subjrecov_margin: 0.1
+    task_floor: 0.55
+    task_good: 0.62
+    recalib_note: subject-recov cutoff = 1/K + subjrecov_margin; validate with permutation
+      null at DINQ time

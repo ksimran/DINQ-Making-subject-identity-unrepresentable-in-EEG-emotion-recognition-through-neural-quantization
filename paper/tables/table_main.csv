@@ -1,0 +1,8 @@
+method,emotion(unseen),subj_recov_linear,subj_recov_max,null(K=31),margin(max-null),above_null,n_splits
+recentering,0.618,0.011,0.273,0.043,+0.230,yes,8
+random,0.599,0.040,0.096,0.043,+0.053,yes,8
+task_only,0.622,0.083,0.103,0.043,+0.060,yes,8
+grl_subject,0.606,0.099,0.152,0.043,+0.109,yes,8
+mmd,0.607,0.054,0.106,0.043,+0.063,yes,8
+DINQ (continuous),0.614,0.047,0.059,0.041,+0.019,yes,8
+DINQ (vq512_conU),0.620,0.041,0.051,0.041,+0.010,yes,8

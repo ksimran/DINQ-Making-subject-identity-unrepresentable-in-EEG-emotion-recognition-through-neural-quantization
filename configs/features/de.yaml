@@ -1,0 +1,6 @@
+# @package features
+# Differential entropy features (SCMM's input; SEED-V ships them precomputed).
+kind: de
+band_method: filterbank
+win_sec: 4.0
+hop_sec: 4.0  # 4 s non-overlapping, matching SEED-V's precomputed DE

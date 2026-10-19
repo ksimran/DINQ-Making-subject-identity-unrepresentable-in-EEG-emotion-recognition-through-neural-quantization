@@ -1,0 +1,13 @@
+pair,arm,emotion,dom_lin,dom_deep,resid,cond,cell
+deap→faced,baseline,0.53,0.5,0.96,0.53,0.58,C2_SuperficiallyInvariant
+deap→faced,dinq,0.52,0.58,0.76,0.56,0.82,C5_NullRepresentation
+deap→seedv,baseline,0.57,0.5,0.91,0.56,0.59,C2_SuperficiallyInvariant
+deap→seedv,dinq,0.56,0.61,0.76,0.59,0.83,C2_SuperficiallyInvariant
+faced→deap,baseline,0.51,0.5,0.96,0.53,0.58,C5_NullRepresentation
+faced→deap,dinq,0.51,0.89,0.93,0.89,0.95,C5_NullRepresentation
+faced→seedv,baseline,0.52,0.5,0.96,0.53,0.63,C5_NullRepresentation
+faced→seedv,dinq,0.53,0.84,0.88,0.83,0.91,C4_TaskDomainEntangled
+seedv→deap,baseline,0.55,0.5,0.91,0.56,0.59,C2_SuperficiallyInvariant
+seedv→deap,dinq,0.54,0.75,0.75,0.75,0.84,Unclassified
+seedv→faced,baseline,0.49,0.5,0.96,0.53,0.63,C5_NullRepresentation
+seedv→faced,dinq,0.5,0.65,0.74,0.53,0.84,C5_NullRepresentation

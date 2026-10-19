@@ -1,0 +1,10 @@
+# @package features
+# Time x frequency x space frontend: band-pass filter bank -> per-band shrunk SPD
+# covariances -> tangent space (fitted at train time on the source-train split).
+kind: covariance
+band_method: filterbank  # 'wavelet_packet' for the band-granularity ablation
+estimator: lwf  # Ledoit-Wolf shrinkage (full-rank SPD)
+normalize: trace  # per-covariance trace normalisation: cross-corpus scale invariance (uV vs V)
+win_sec: 4.0
+hop_sec: 2.0  # 50% overlap: more windows for stable tangent statistics
+tangent_metric: riemann  # global Riemannian mean reference

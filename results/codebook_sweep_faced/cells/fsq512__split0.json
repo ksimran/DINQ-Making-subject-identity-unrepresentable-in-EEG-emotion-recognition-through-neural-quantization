@@ -1,0 +1,29 @@
+{
+  "emotion_unseen": 0.5,
+  "recov_train": {
+    "linear": 0.010869565217391304,
+    "mlp": 0.010962457801844258,
+    "hgb": 0.01059332555310009,
+    "K": 92
+  },
+  "recov_heldout": {
+    "linear": 0.03225806451612903,
+    "mlp": 0.03133326618625988,
+    "hgb": 0.029108034182340252,
+    "K": 31
+  },
+  "ceiling_train": 0.010869565217391304,
+  "ceiling_heldout": 0.03225806451612903,
+  "n_train_subjects": 92,
+  "n_test_subjects": 31,
+  "config": "fsq512",
+  "split": 0,
+  "run": {
+    "epochs": 60,
+    "cap": 8000,
+    "n_perm": 15,
+    "test_frac": 0.25,
+    "seed": 0,
+    "git": "64d78eb-dirty"
+  }
+}

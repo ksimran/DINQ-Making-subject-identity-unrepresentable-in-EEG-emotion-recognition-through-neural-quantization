@@ -1,0 +1,30 @@
+# DINQ (Paper 2) — Python 3.11+. Install torch separately with the CUDA wheel:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+#
+# Load-bearing math comes from battle-tested libraries (design doc / handoff rule):
+# do NOT hand-roll SPD geometry, wavelets, or quantizers.
+
+numpy>=2.0,<3          # pyRiemann 0.12 uses the numpy>=2 array .mT API
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.3
+
+torch>=2.2              # install with the CUDA index-url above
+
+pyriemann>=0.6                 # covariances / tangent space / recentering (SPD geometry)
+vector-quantize-pytorch>=1.14  # VQ / RVQ / FSQ (Phase 2 quantizer; collapse-proof FSQ)
+PyWavelets>=1.4                # wavelet / wavelet-packet band decomposition
+mne>=1.6                       # EEG I/O (Neuroscan .cnt) + preprocessing
+
+hydra-core>=1.3        # config-driven module toggles (Minimal/Full split)
+wandb>=0.19            # two-axis logging: task accuracy AND probe metrics
+umap-learn>=0.5        # P7 cluster-quality probe (from Paper 1 suite)
+
+matplotlib>=3.7
+seaborn>=0.13
+tqdm>=4.65
+pyyaml>=6.0
+openpyxl>=3.1          # SEED-V .xlsx metadata (labels, stimuli order)
+einops>=0.7
+
+pytest>=7.0

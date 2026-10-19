@@ -1,0 +1,10 @@
+setting,threshold,value,rationale / perm-null
+cross-corpus,task_floor,0.52,recalibrated (perm-null / transfer dist)
+cross-corpus,task_good,0.55,0.55 (was 0.60; cross-corpus ceiling)
+cross-corpus,dom_low,0.6,chance+0.10
+cross-corpus,dom_high,0.75,60th-pct reference deep
+cross-corpus,residual_low,0.6,chance+0.10
+faced (subject),null_95pct ceiling,0.041,"stabilized max-over-probes perm-null (n=1000, K=31)"
+faced (subject),dinq_recov (max),0.051,"[0.042, 0.060]; NEAR-C1 (DG) with a small characterized residual (perm p=0.001)"
+faced (subject),chance 1/K,0.032,K=31 held-out subjects
+faced (subject),task_floor_permnull,0.5359,n_perm_pooled=1000

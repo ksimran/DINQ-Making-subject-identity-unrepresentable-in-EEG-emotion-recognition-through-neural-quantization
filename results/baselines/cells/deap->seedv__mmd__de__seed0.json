@@ -1,0 +1,49 @@
+{
+  "direction": "deap->seedv",
+  "model": "mmd",
+  "seed": 0,
+  "input": "de",
+  "category": "C3_DomainExploiting",
+  "ci_stable": false,
+  "probe_underpowered": true,
+  "diagnostics": {
+    "deep_n_iter": 14.333333333333334,
+    "deep_converged": 1.0,
+    "domain_strong_acc": 0.9577619047619048
+  },
+  "task_target_acc_dg": 0.6353535353535353,
+  "quantities": {
+    "task_target_acc": {
+      "point": 0.6353535353535353,
+      "ci_low": 0.5,
+      "ci_high": 0.88008658008658
+    },
+    "domain_linear_acc": {
+      "point": 0.9200210622710623,
+      "ci_low": 0.7805631868131868,
+      "ci_high": 1.0
+    },
+    "domain_deep_acc": {
+      "point": 0.8531767399267399,
+      "ci_low": 0.7024070054945055,
+      "ci_high": 0.9670345238095238
+    },
+    "residual_domain_acc": {
+      "point": 0.3118892508143323,
+      "ci_low": 0.11024022801302932,
+      "ci_high": 0.5129953854505972
+    },
+    "conditional_domain_acc": {
+      "point": 0.9635026737967914,
+      "ci_low": 0.9180430790554,
+      "ci_high": 1.0
+    },
+    "subspace_cos2_max": {
+      "point": 0.9120675181317455
+    }
+  },
+  "n_windows": 7368,
+  "n_trials": 8,
+  "secs": 41.6,
+  "dg_acc": 0.44306163797442866
+}

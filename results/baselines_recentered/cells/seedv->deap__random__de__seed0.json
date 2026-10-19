@@ -1,0 +1,51 @@
+{
+  "direction": "seedv->deap",
+  "model": "random",
+  "seed": 0,
+  "input": "de",
+  "category": "C5_NullRepresentation",
+  "ci_stable": true,
+  "probe_underpowered": true,
+  "diagnostics": {
+    "domain_linear_acc": 1.0,
+    "deep_probe_accs": {
+      "mlp": 0.969,
+      "hgb": 0.886
+    }
+  },
+  "task_target_acc_dg": 0.5045218087234894,
+  "quantities": {
+    "task_target_acc": {
+      "point": 0.5045218087234894,
+      "ci_low": 0.5,
+      "ci_high": 0.514
+    },
+    "domain_linear_acc": {
+      "point": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0
+    },
+    "domain_deep_acc": {
+      "point": 0.9688882783882784,
+      "ci_low": 0.9243842948717949,
+      "ci_high": 1.0
+    },
+    "residual_domain_acc": {
+      "point": 0.5320304017372421,
+      "ci_low": 0.34296959826275786,
+      "ci_high": 0.6956093919652552
+    },
+    "conditional_domain_acc": {
+      "point": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0
+    },
+    "subspace_cos2_max": {
+      "point": 0.9830746677345924
+    }
+  },
+  "n_windows": 7368,
+  "n_trials": 8,
+  "secs": 7.2,
+  "dg_acc": NaN
+}

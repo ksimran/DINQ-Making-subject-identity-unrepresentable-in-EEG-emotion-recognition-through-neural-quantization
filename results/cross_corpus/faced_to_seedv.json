@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "pair": [
+      "seedv",
+      "faced"
+    ],
+    "common_channels": [
+      "Fp1",
+      "F3",
+      "F7",
+      "FC5",
+      "FC1",
+      "C3",
+      "T7",
+      "CP5",
+      "CP1",
+      "P3",
+      "P7",
+      "PO3",
+      "O1",
+      "Oz",
+      "Pz",
+      "Fp2",
+      "Fz",
+      "F4",
+      "F8",
+      "FC6",
+      "FC2",
+      "Cz",
+      "C4",
+      "T8",
+      "CP6",
+      "CP2",
+      "P4",
+      "P8",
+      "PO4",
+      "O2"
+    ],
+    "in_dim": 1860,
+    "n": 87632,
+    "n_subjects": {
+      "seedv": 16,
+      "faced": 123
+    },
+    "corpus_windows": {
+      "seedv": 46304,
+      "faced": 41328
+    }
+  },
+  "source": "faced",
+  "target": "seedv",
+  "seed": 0,
+  "thresholds": "cross_corpus (frozen)",
+  "baseline": {
+    "category": "C5_NullRepresentation",
+    "ci_stable": false,
+    "task_target_acc": {
+      "point": 0.5165,
+      "ci_low": 0.4837,
+      "ci_high": 0.5531
+    },
+    "domain_linear_acc": {
+      "point": 0.5,
+      "ci_low": 0.5,
+      "ci_high": 0.5
+    },
+    "domain_deep_acc": {
+      "point": 0.9647,
+      "ci_low": 0.9574,
+      "ci_high": 0.972
+    },
+    "residual_domain_acc": {
+      "point": 0.5284,
+      "ci_low": 0.5284,
+      "ci_high": 0.5284
+    },
+    "conditional_domain_acc": {
+      "point": 0.6348,
+      "ci_low": 0.6113,
+      "ci_high": 0.656
+    },
+    "deep_probe_accs": {
+      "mlp": 0.965,
+      "hgb": 0.928
+    },
+    "probe_underpowered": false
+  },
+  "domain_perm_null": {
+    "mean": 0.5005019333081745,
+    "p95": 0.5059978788438663,
+    "max": 0.513288422482101,
+    "n_perm": 30
+  },
+  "dinq": {
+    "category": "C4_TaskDomainEntangled",
+    "ci_stable": true,
+    "task_target_acc": {
+      "point": 0.5314,
+      "ci_low": 0.5146,
+      "ci_high": 0.5526
+    },
+    "domain_linear_acc": {
+      "point": 0.8395,
+      "ci_low": 0.8203,
+      "ci_high": 0.8551
+    },
+    "domain_deep_acc": {
+      "point": 0.8804,
+      "ci_low": 0.8631,
+      "ci_high": 0.8938
+    },
+    "residual_domain_acc": {
+      "point": 0.8305,
+      "ci_low": 0.8119,
+      "ci_high": 0.844
+    },
+    "conditional_domain_acc": {
+      "point": 0.9091,
+      "ci_low": 0.8951,
+      "ci_high": 0.9198
+    },
+    "deep_probe_accs": {
+      "mlp": 0.879,
+      "hgb": 0.88
+    },
+    "probe_underpowered": false,
+    "config": {
+      "quantizer": "vq",
+      "vq_codebook": 512,
+      "d_r": 16,
+      "contrast_on": "u",
+      "epochs": 60,
+      "train_pool": "source"
+    }
+  }
+}
