@@ -9,6 +9,8 @@ pushed into the residual while emotion stays in `z_c`. Invariance is certified w
 probe suite (linear, MLP, gradient-boosted trees; max over probes) against a
 permutation null.
 
+![DINQ overview: feature pipeline, quantized content code and probes](paper/figures/fig_arch.png)
+
 > Citation: to be added on acceptance.
 
 ## Layout
@@ -133,69 +135,6 @@ earlier comparison from them. `results/baselines/` holds the cross-dataset basel
 from before per-subject recentring became part of the pipeline; it is superseded by
 `results/baselines_recentered/`.
 
-## Protocol notes
-
-**Data and labels**
-- Binary emotion labels. SEED-V: happy -> 1; sad, fear, disgust -> 0; neutral dropped
-  (corpus codes 0 disgust, 1 fear, 2 sad, 3 neutral, 4 happy). FACED: videos 1-12
-  negative -> 0, 13-16 neutral dropped, 17-28 positive -> 1, with the video order taken
-  from the FACED documentation. DEAP: valence above the median of the loaded trials ->
-  1 (ties -> 0); `valence_threshold=5.0` gives SCMM's fixed cut instead.
-- Ids: domain DEAP 0, SEED-V 1, FACED 2; subject ids are offset to DEAP 1-32,
-  SEED-V 33-48 and FACED 100-222 so they never collide.
-- The common montage is computed as an intersection: DEAP and SEED-V share all 32 DEAP
-  channels; with FACED it is 30 (DEAP minus AF3/AF4). Channel orders come from SEED-V's
-  `channel_62_pos.locs`, the DEAP documentation (Geneva order, first 32 of 40 channels)
-  and the FACED `.bdf` header (A1/A2 mastoids dropped).
-- DEAP: 128 Hz, 3 s pre-trial baseline dropped. FACED: 250 Hz, 28 videos of 30 s.
-  SEED-V precomputed DE: 310 = 62 channels x 5 bands, channel-major.
-
-**Features**
-- Four bands shared by all corpora: theta 4-8, alpha 8-14, beta 14-31, gamma 31-50 Hz
-  (DEAP's preprocessed EEG is band-passed at 4-45 Hz, so delta is absent). Zero-phase
-  MNE FIR band-pass on the continuous trial before windowing; 4 s windows, 2 s hop.
-- Per-band Ledoit-Wolf covariances, trace-normalised. Per-subject Riemannian recentring
-  (each subject's mean moved to the identity; label-free, Zanini et al. 2018) is applied
-  to every method before the tangent map.
-
-**Model**
-- h = f_enc(v), u = g_c(h), z_c = Q(u), z_r = g_r(h), v_hat = f_dec([z_c, z_r]).
-- L = ||v - v_hat||^2 + L_vq + lambda * L_con, where L_con is supervised contrastive with
-  same-emotion positives, on z_c or on the pre-quantization u (`contrast_on='u'`, the
-  operating point).
-- Quantizer: VQ (EMA updates, k-means initialisation, dead-code replacement), FSQ, or
-  `'none'` (identity at matched capacity, the continuous ablation).
-
-**Evaluation**
-- Subject recoverability: K-way classification among held-out subjects under
-  trial-grouped CV, max over a linear probe, a regularised MLP and gradient-boosted
-  trees, on PCA to 0.95 variance (64 components for high-dimensional baselines) and at
-  most 8000 windows.
-- Emotion: logistic probe on trial-mean features, trained on the training subjects and
-  tested on the held-out subjects.
-- Cross-dataset certificate: domain probes use subject-grouped `StratifiedGroupKFold`.
-  Trial-level grouping leaks subject identity because subjects are domain-homogeneous:
-  on a within-DEAP null pseudo-domain, trial-grouped CV scored 1.00 and subject-grouped
-  CV near chance. A cell is flagged `probe_underpowered` when the linear probe beats the
-  deep probes by more than 0.03. CIs come from a block bootstrap over whole groups.
-- Permutation nulls shuffle subject labels at trial granularity, with the PCA fitted
-  once. On FACED, 125 permutations per split are pooled over 8 splits (n = 1000); the
-  observed values are compared by permutation p-value, Mann-Whitney U and CI overlap,
-  and labelled near-C1 when the first two reject at 0.05.
-- Task floor: 95th percentile of held-out emotion under trial-level emotion-label
-  shuffles on the recentred baseline, maximum over splits.
-
-**Baselines**
-- SCMM (Liu et al., ACM MM 2025) runs on the same 4-band DE features with its own losses
-  and masking. The one adaptation is the flattened encoder size, computed by a dummy
-  forward pass because SCMM hard-codes it for 5 bands. SCMM finetunes on target labels,
-  so it is a transfer method rather than domain generalisation and is reported on the
-  cross-dataset axis only.
-- The reference encoders (random, task-only, MMD, GRL) share one backbone. The
-  certificate thresholds were recalibrated on them and frozen before DINQ was evaluated.
-
-**Figures** are drawn at final print width (90 or 140 mm) with Arial-metric text of at
-least 7 pt, so they can be placed unscaled.
 
 ## Licence
 
